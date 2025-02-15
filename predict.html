@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction page</title>
+    <style type = text/css>
+        body{
+            padding-top: 125px;
+            align-items: center;
+            text-align: center;
+            background-image: url("{% static 'diabeticpredict\images\plane.jpeg'%}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        h1{
+            font-size: 50px;
+        }
+        td{
+            font-size: 25px;
+        }
+        input{
+            padding: 5px;
+            width: 200px;
+        }
+        input[type=submit]{
+            background-color: #C3EFED;
+            font-weight: 500px;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 5px;
+            width: 15%;
+            margin: 10px;  
+            cursor: pointer;  
+        }
+    </style>
+    
+    <script>
+ 
+        function maxLengthCheck(object)
+        {
+          if (object.value.length >49)
+            object.value = object.value.slice(0, object.maxLength)
+        }
+      </script>
+</head>
+<body>
+    <div text-align="center" class="main">
+        {% if form %}
+        <h1>Enter The Following Values</h1>
+        <form action = "result">
+            <table align="center"> 
+                <tr>
+                    <td text-align = "right">Pregnancies :</td>
+                    <td text-align = "left" ><input type = "number" name = n1 min="0" max="30" required></td>
+                </tr>
+                <tr>
+                    <td text-align = "right">Glucose :</td>
+                    <td text-align = "left" ><input type = "number" name = n2 oninput="maxLengthCheck(this)" min="0" max="199" required></td>
+                </tr>
+                <tr>
+                    <td text-align = "right">Blood Pressure :</td>
+                    <td text-align = "left" ><input type = "number" name = n3 oninput="maxLengthCheck(this)" min="0" max="150" required></td>
+                </tr>
+                <tr>
+                    <td text-align = "right">Skin thickness :</td>
+                    <td text-align = "left" ><input type = "number" name = n4 oninput="maxLengthCheck(this)" min="0" max="50" required></td>
+                </tr>
+                <tr>
+                    <td text-align = "right">Insulin :</td>
+                    <td text-align = "left" ><input type = "number" name = n5 oninput="maxLengthCheck(this)" min="0" max="50" required></td>
+                </tr>
+                <tr>
+                    <td text-align = "right">Body mass index :</td>
+                    <td text-align = "left" ><input type = "number" name = n6  oninput="maxLengthCheck(this)" min="0" max="50" required></td>
+                </tr>
+                <tr>
+                    <td text-align = "right">Diabetes function :</td>
+                    <td text-align = "left" ><input type = "number" name = n7 oninput="maxLengthCheck(this)" min="0" max="10" required></td>
+                </tr>
+                <tr>
+                    <td text-align = "right">Age :</td>
+                    <td text-align = "left" ><input type = "number" name = n8 oninput="maxLengthCheck(this)" min="0" max="100" required></td>
+                </tr>
+            </table>
+            <input type ="submit" value="Predict">
+        </form>
+        {% else %}
+            <h1>Result : {{ result2 }}</h1>
+            <form action="diet1">
+                <input type="submit" value="Let's Go To Diet">
+            </form>
+        {% endif %}
+        
+    </div>
+</body>
+</html>

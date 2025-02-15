@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Diet page</title>
+    <style>
+        body{
+            background-image:url("{% static 'diabeticpredict\images\diet1.jpg'%}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size:cover;
+            width: 100%;
+            height: auto;
+        }
+        input[type=submit]{
+            background-color:#104D05 ;
+            border: 2px;
+            color: white;
+            font-weight: bold;
+            font-size: large;
+            font-family: 'Georgia', Times, serif;
+            padding: 16px 32px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        form{
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 70%;
+            flex-direction: column;
+            text-align: center;
+        }
+        .below{
+            margin-top: 40px;
+        }
+        h3{
+            font-size: 35px;
+            text-align: right;
+            padding-right: 110px;
+            padding-top: 160px;
+        }
+    </style>
+
+</head>
+<body>
+    <h3>Click Below 👇</h3>
+    <div class="below">
+    <form action="below25">
+        <input type = "submit" value = "Below 25 years">
+    </form>
+    </div>
+    <br>
+    <form action="age25">
+        <input type = "submit" value = "25 to 50 years">
+    </form>
+    <br>
+    <form action="above50">
+        <input type = "submit" value = "above 50 years">
+    </form>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="row">
+        <h3 style="text-align: center;color :aliceblue">LIST OF FOOD ITEMS </h3>
+     <div class="col-4" style="background-color: #D0D0C7; width: 37%; height: max-content; margin-left: 12%; border-radius: 15px; box-shadow:5px 3px 4px; padding: 20px;padding-bottom: 20px;" >
+        
+        <header>  <strong>
+            <br>
+        <h4 style=" margin-left: 20px;">Food items to be Avoided</h4>
+        
+        </strong>
+        </header>
+        
+        <ul>
+        
+            <li>
+                <strong>Snack</strong>
+            </li>
+            <br>
+            <li>
+                <strong>Fried Food</strong>
+                
+            </li>
+            <br>
+            <li>
+                <strong>Soda</strong>
+            </li>
+            <br>
+            <li>
+                <strong>Bread</strong>
+            </li>
+            <br>
+            <li>
+                <strong>Bakery Products</strong>
+            </li>
+
+            <br>
+            <li>
+                <strong>Sweets and Cakes</strong>
+            </li>
+            <br>
+            <li>
+                <strong>Ice - Cream</strong>
+                
+            </li>
+            <br>
+            <li>
+                <strong>Processed Meat and Pasta with Meat</strong>
+            </li>
+            <br>
+            <li>
+                <strong>Burgers and Fries</strong>
+            </li>
+            <br>
+            <li>
+                <strong>Beer and Cocktails</strong>
+            </li>
+            <br>
+        </ul>
+            </div>
+     <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+     <div class="col-4" style="background-color: #D0D0C7; width: 37%; height: max-content; margin-left: 2%; border-radius: 15px; box-shadow:5px 3px 4px;padding: 20px;padding-bottom: 20px;" >
+        
+        <header>  <strong>
+            <br>
+        <h4 style=" margin-left: 20px;">Food items taken insted of Avoiding</h4>
+        
+        </strong>
+        </header>
+        
+        <ul>
+        
+        <li>
+            <strong>Fish</strong>
+        </li>
+        <br>
+        <li>
+            <strong>Cheese</strong>
+            
+        </li>
+        <br>
+        <li>
+            <strong>Salad</strong>
+        </li>
+        <br>
+        <li>
+            <strong>Green Juice</strong>
+        </li>
+        <br>
+        <li>
+            <strong>Low Carb Cakes</strong>
+        </li>
+        <br>
+        <li>
+            <strong>Sugar Free Icee-Cream</strong>
+        </li>
+        <br>
+        <li>
+            <strong>Real Meat</strong>
+            
+        </li>
+        <br>
+        <li>
+            <strong>Vegetable Pasta</strong>
+        </li>
+        <br>
+        <li>
+            <strong>Burgers without bread</strong>
+        </li>
+        <br>
+        <li>
+            <strong>Red Wine</strong>
+        </li>
+        <br>
+        </ul>
+      </div>
+    </div>    
+</body>
+</html>
